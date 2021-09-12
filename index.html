@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fnugz</title>
+
+	<!-- <link href="css/modesta.css" type="text/css" rel="stylesheet"> -->
+	<link href="css/colours.css" type="text/css" rel="stylesheet">
+	<link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+	<link href="fontawesome/css/brands.css" rel="stylesheet">
+	<link href="fontawesome/css/solid.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,900,900i" rel="stylesheet">
+
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<section class="fullscreen" style="background-color: #333;">
+	<div class="background" style="background-image: url('bg.jpg');"></div>
+	<div class="center-object">
+		<div class="me">
+			<img draggable="false" src="me.png">
+			<ul class="title">
+				<li id="prefix"></li>
+				<li id="name"></li>
+				<li id="suffix"></li>
+			</ul>
+		</div>
+		<div class="links">
+			<!-- <a href="#" onmouseenter="email()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x primary-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+				</span>
+			</a> -->
+			<a href="https://steamcommunity.com/id/fnugz" target="_blank" onmouseenter="steam()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x steam-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-steam fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<a href="#" onmouseenter="discord()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x discord-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-discord fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<a href="https://youtube.com/fnugz" target="_blank" onmouseenter="youtube()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x youtube-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<a href="https://twitch.tv/fnugz" target="_blank" onmouseenter="twitch()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x twitch-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-twitch fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<a href="https://twitter.com/fnugz" target="_blank" onmouseenter="twitter()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x twitter-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<a href="https://github.com/Fnugz" target="_blank" onmouseenter="github()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x github-text">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-github fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			<a href="https://artstation.com/Fnugz" target="_blank" onmouseenter="artstation()" onmouseleave="reset()">
+				<span class="fa-stack fa-3x" style="color:#13aff0;">
+					<i class="fas fa-square fa-stack-2x"></i>
+					<i class="fab fa-artstation fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- <section style="height: 100%">
+	more stuff down here
+</section> -->
+
+<script type="text/javascript">
+window.onload = reset;
+
+function reset() {
+	document.getElementById("prefix").textContent =	"Hello I'm ";
+	document.getElementById("name").textContent =	"Fnugz";
+	document.getElementById("suffix").textContent =	" ";
+}
+function email() {
+	document.getElementById("prefix").textContent =	"Marc@";
+	document.getElementById("suffix").textContent =	".com";
+}
+function steam() {
+	document.getElementById("prefix").textContent =	"steam/id/";
+}
+function youtube() {
+	document.getElementById("prefix").textContent =	"youtube/";
+}
+function twitch() {
+	document.getElementById("prefix").textContent =	"twitch/";
+}
+function twitter() {
+	document.getElementById("prefix").textContent =	"twitter/";
+}
+function github() {
+	document.getElementById("prefix").textContent =	"github/";
+}
+function discord() {
+	document.getElementById("prefix").textContent =	"";
+	document.getElementById("suffix").textContent =	"#4653";
+}
+function artstation() {
+	document.getElementById("prefix").textContent =	"artstation/";
+}
+</script>
+
+</body>
+</html>
