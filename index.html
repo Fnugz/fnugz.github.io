@@ -3,26 +3,28 @@
 <head>
 	<title>Fnugz</title>
 
-	<!-- <link href="css/modesta.css" type="text/css" rel="stylesheet"> -->
-	<link href="css/colours.css" type="text/css" rel="stylesheet">
+	<link href="css/colors.css" type="text/css" rel="stylesheet">
 	<link href="fontawesome/css/fontawesome.css" rel="stylesheet">
 	<link href="fontawesome/css/brands.css" rel="stylesheet">
 	<link href="fontawesome/css/solid.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,900,900i" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&effect=neon" rel="stylesheet">
 
 	<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<section class="fullscreen" style="background-color: #333;">
+<section class="fullscreen">
 	<div class="background" style="background-image: url('bg.jpg');"></div>
 	<div class="center-object">
 		<div class="me">
 			<img draggable="false" src="me.png">
-			<ul class="title">
-				<li id="prefix"></li>
-				<li id="name"></li>
-				<li id="suffix"></li>
-			</ul>
+			<div class="title">
+				<span id="prefix"></span>
+				<span id="name">Fnugz</span>
+				<span id="suffix"></span>
+			</div>
 		</div>
 		<div class="links">
 			<!-- <a href="#" onmouseenter="email()" onmouseleave="reset()">
@@ -68,7 +70,7 @@
 				</span>
 			</a>
 			<a href="https://artstation.com/Fnugz" target="_blank" onmouseenter="artstation()" onmouseleave="reset()">
-				<span class="fa-stack fa-3x" style="color:#13aff0;">
+				<span class="fa-stack fa-3x artstation-text">
 					<i class="fas fa-square fa-stack-2x"></i>
 					<i class="fab fa-artstation fa-stack-1x fa-inverse"></i>
 				</span>
@@ -76,43 +78,59 @@
 		</div>
 	</div>
 </section>
-<!-- <section style="height: 100%">
+<!--
+<section class="fullscreen half">
 	more stuff down here
-</section> -->
+</section>
+ -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
+
 window.onload = reset;
 
+var elem_prefix = $("#prefix");
+var elem_suffix = $("#suffix");
+
+function change(prefix, suffix) {
+	elem_prefix.fadeOut(100, function(){
+		elem_prefix.html(prefix);
+		elem_prefix.fadeIn(100);
+	});
+
+	elem_suffix.fadeOut(100, function(){
+		elem_suffix.html(suffix);
+		elem_suffix.fadeIn(100);
+	});
+}
+
+
 function reset() {
-	document.getElementById("prefix").textContent =	"Hello I'm ";
-	document.getElementById("name").textContent =	"Fnugz";
-	document.getElementById("suffix").textContent =	" ";
+	change("Hello I'm ", "");
 }
 function email() {
-	document.getElementById("prefix").textContent =	"Marc@";
-	document.getElementById("suffix").textContent =	".com";
+	change("Marc@", ".com");
 }
 function steam() {
-	document.getElementById("prefix").textContent =	"steam/id/";
+	change("steam/id/", "");
 }
 function youtube() {
-	document.getElementById("prefix").textContent =	"youtube/";
+	change("youtube/", "");
 }
 function twitch() {
-	document.getElementById("prefix").textContent =	"twitch/";
+	change("twitch/", "");
 }
 function twitter() {
-	document.getElementById("prefix").textContent =	"twitter/";
+	change("twitter/", "");
 }
 function github() {
-	document.getElementById("prefix").textContent =	"github/";
+	change("github/", "");
 }
 function discord() {
-	document.getElementById("prefix").textContent =	"";
-	document.getElementById("suffix").textContent =	"#4653";
+	change(" ", "\#4653");
 }
 function artstation() {
-	document.getElementById("prefix").textContent =	"artstation/";
+	change("artstation/", "");
 }
 </script>
 
